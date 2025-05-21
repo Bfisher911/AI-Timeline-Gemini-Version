@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The History of AI - Interactive Infographic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .infographic-container {
+            width: 90%;
+            max-width: 900px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 20px;
+        }
+
+        .slide {
+            display: none; /* Hidden by default */
+            padding: 30px 40px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide h1, .slide h2 {
+            color: #00509e;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .slide h1 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        .slide h2 {
+            font-size: 1.8em;
+            border-bottom: 2px solid #00509e;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        .slide h3 {
+            color: #0077cc;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 8px;
+        }
+
+        .slide p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .slide ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .slide ul li {
+            background-color: #e7f3fe;
+            border-left: 5px solid #0077cc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .slide ul li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .slide ul li strong {
+            color: #00509e;
+            font-weight: bold;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: #00509e;
+        }
+
+        .nav-button {
+            background-color: #fff;
+            color: #00509e;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-button:hover {
+            background-color: #e7f3fe;
+            color: #004080;
+            transform: translateY(-2px);
+        }
+        .nav-button:active {
+            transform: translateY(0);
+        }
+
+        .nav-button:disabled {
+            background-color: #ccc;
+            color: #888;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+        .slide-counter {
+            color: #fff;
+            font-size: 1em;
+            align-self: center;
+        }
+
+        /* Specific styles for first and last slide */
+        .slide.title-slide {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px; /* Adjust as needed */
+        }
+        .slide.title-slide h1 {
+            font-size: 2.8em;
+        }
+        .slide.title-slide p {
+            font-size: 1.4em;
+            color: #555;
+        }
+        .slide.end-slide p {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="infographic-container">
+        <div class="slide active title-slide" id="slide1">
+            <h1>The History of AI</h1>
+            <p>Key Milestones & Fascinating Facts</p>
+        </div>
+
+        <div class="slide" id="slide2">
+            <h2>1940s–1950s: Early Foundations</h2>
+            <ul>
+                <li>
+                    <strong>1943 – McCulloch & Pitts:</strong> Their artificial neuron model was directly inspired by biology, laying the very groundwork for the neural networks powering today’s deep‑learning systems.
+                </li>
+                <li>
+                    <strong>1950 – Turing Test:</strong> Alan Turing’s thought experiment remains one of AI’s most provocative ideas—and still fuels debates on whether a machine can truly “think.”
+                </li>
+                <li>
+                    <strong>1956 – Dartmouth Conference:</strong> What was intended as a brief summer workshop became the official birth of AI research, spawning ongoing development more than half a century later.
+                </li>
+                <li>
+                    <strong>1950s – Logic Theorist & LISP:</strong> Logic Theorist was the first program to “think” like a human by proving math theorems; LISP became the dominant language for AI research well into the 1980s.
+                </li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide3">
+            <h2>1960s–1970s: Symbolic AI & Chatbots</h2>
+            <ul>
+                <li>
+                    <strong>1960s – ELIZA:</strong> Joseph Weizenbaum’s chatbot mimicked a Rogerian therapist so convincingly that many users attributed genuine empathy to it.
+                </li>
+                <li>
+                    <strong>1965 – ELIZA’s “DOCTOR” Script:</strong> Some early users, unaware they were talking to software, believed ELIZA could provide real psychological insight.
+                </li>
+                <li>
+                    <strong>1972 – Shakey the Robot:</strong> The first robot to integrate perception, planning, and action—pioneering the core capabilities of modern autonomous systems.
+                </li>
+                <li>
+                    <strong>1970s – MYCIN:</strong> One of the earliest medical expert systems, MYCIN could diagnose bacterial infections accurately but was never adopted due to its “black‑box” reasoning.
+                </li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide4">
+            <h2>1980s: Rise of Expert Systems</h2>
+            <ul>
+                <li>
+                    <strong>1980s – Expert Systems Boom:</strong> Rule‑based systems like XCON drove huge commercial interest, converting human expertise into massive, hand‑crafted knowledge bases.
+                </li>
+                <li>
+                    <strong>1982 – Hopfield Networks:</strong> John Hopfield’s recurrent network showed how AI could solve optimization and pattern‑recognition tasks, foreshadowing later deep‑learning advances.
+                </li>
+                <li>
+                    <strong>1987–1993 – AI Winter:</strong> Overhyped expectations led to funding cuts—but research during this slowdown laid critical groundwork for AI’s later resurgence.
+                </li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide5">
+            <h2>1990s: Machine Learning Emerges</h2>
+            <ul>
+                <li>
+                    <strong>1997 – Deep Blue vs. Kasparov:</strong> IBM’s chess‑playing machine defeated Garry Kasparov by calculating millions of positions per second—demonstrating raw computational strength over human intuition.
+                </li>
+                <li>
+                    <strong>1998 – Reinforcement Learning:</strong> Richard Sutton and colleagues formalized RL, mimicking how humans learn via rewards and penalties—now the backbone of robotics and game‑playing AIs.
+                </li>
+                <li>
+                    <strong>1990s – Decision Trees & SVMs:</strong> Algorithms like decision trees and support vector machines revolutionized fields from face recognition to speech processing by learning directly from data.
+                </li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide6">
+            <h2>2000s: Data & Computational Power</h2>
+            <ul>
+                <li>
+                    <strong>2002 – Roomba:</strong> iRobot’s vacuum cleaner brought AI into millions of homes, proving that “smart” household gadgets could achieve mass‑market success.
+                </li>
+                <li>
+                    <strong>2006 – Deep Learning Resurgence:</strong> Geoffrey Hinton and Yoshua Bengio showed that adding more layers (i.e., deeper networks) dramatically boosted performance—reviving neural networks.
+                </li>
+                <li>
+                    <strong>2006–2010 – Big Data Era:</strong> The explosion of data from online platforms and sensors turbocharged machine learning, enabling the dramatic rise of data‑driven AI.
+                </li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide7">
+            <h2>2010s: Deep Learning Explosion</h2>
+            <ul>
+                <li>
+                    <strong>2011 – Watson Wins Jeopardy!:</strong> IBM’s Watson beat former champions by processing natural language clues and retrieving answers at lightning speed—showcasing AI’s NLP potential.
+                </li>
+                <li>
+                    <strong>2012 – AlexNet on ImageNet:</strong> A GPU‑accelerated convolutional network halved error rates in image classification, igniting a wave of breakthroughs in computer vision.
+                </li>
+                <li>
+                    <strong>2014 – AlphaGo vs. Lee Sedol:</strong> DeepMind’s Go‑playing AI conquered a human champion in a game long thought too complex for machines.
+                </li>
+                <li>
+                    <strong>2015 – Ethics Debate Ignites:</strong> Warnings from Elon Musk and Stephen Hawking about superintelligent AI sparked a global conversation on safety and governance.
+                </li>
+                <li>
+                    <strong>2017 – AlphaGo Zero:</strong> Learned Go purely by playing itself—no human data—highlighting the power of self‑play and reinforcement learning.
+                </li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide8">
+            <h2>2020s: AI Everywhere</h2>
+            <ul>
+                <li>
+                    <strong>2020 – GPT‑3 Released:</strong> One of the largest language models to date stunned the world by generating human‑like prose, raising new questions about AI creativity and authorship.
+                </li>
+                <li>
+                    <strong>2021 – AlphaFold Revolution:</strong> Solved the protein‐folding problem with unprecedented accuracy, promising breakthroughs in drug discovery and biology.
+                </li>
+                <li>
+                    <strong>2023 – GPT‑4 Debuts:</strong> Multimodal capabilities (images + text) opened new frontiers in AI’s understanding and generation of rich, cross‑modal content.
+                </li>
+                <li>
+                    <strong>2023 – ChatGPT & DALL·E Goes Mainstream:</strong> Generative AI tools reached millions of users, democratizing access to advanced text and image creation.
+                </li>
+            </ul>
+        </div>
+
+        <div class="slide end-slide" id="slide9">
+            <h2>Future Directions (2025+)</h2>
+            <ul>
+                <li>
+                    <strong>Ethics & Accountability:</strong> As AI power grows, so does the focus on transparency, fairness, and robust governance frameworks.
+                </li>
+                <li>
+                    <strong>Toward General Intelligence?:</strong> Research continues on AGI—machines with broad, human‑like capabilities—fueling both excitement and caution about AI’s ultimate potential.
+                </li>
+            </ul>
+            <p>End of Presentation</p>
+            <p>Questions?</p>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-button" id="prevBtn" onclick="changeSlide(-1)">Previous</button>
+            <span class="slide-counter" id="slideCounter">Slide 1 / 9</span>
+            <button class="nav-button" id="nextBtn" onclick="changeSlide(1)">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const slides = document.querySelectorAll(".infographic-container .slide");
+        const totalSlides = slides.length;
+        const prevButton = document.getElementById("prevBtn");
+        const nextButton = document.getElementById("nextBtn");
+        const slideCounter = document.getElementById("slideCounter");
+
+        function showSlide(slideNumber) {
+            if (slideNumber < 1 || slideNumber > totalSlides) {
+                return;
+            }
+
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+
+            document.getElementById('slide' + slideNumber).classList.add('active');
+            currentSlide = slideNumber;
+
+            // Update navigation buttons
+            prevButton.disabled = (currentSlide === 1);
+            nextButton.disabled = (currentSlide === totalSlides);
+
+            // Update slide counter
+            slideCounter.textContent = `Slide ${currentSlide} / ${totalSlides}`;
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        // Initialize first slide
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>
